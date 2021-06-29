@@ -8,7 +8,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 @Configuration
-public class ApplicationConfig {
+public class ApplicationConfig {//어노테이션을 이용해 값을 셋팅
 	@Value("${admin.id}")
 	private String adminId;
 	@Value("${admin.pw}")
