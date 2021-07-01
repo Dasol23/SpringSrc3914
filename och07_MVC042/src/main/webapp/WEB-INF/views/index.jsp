@@ -11,7 +11,8 @@
 	String context = request.getContextPath();
 	%>
 	context : <%=context%><p>
-	<form action="<%=context%>/studentView3"method="get">
+	<%-- <form action="<%=context%>/studentView3"method="get"> --%>
+	<form action="<%=context%>/studentView5"method="get">
 	이름: <input type="text" name="name"><br/>
 	나이: <input type="text" name="age"><br/>
 	학년: <input type="text" name="gradeNum"><br/>
