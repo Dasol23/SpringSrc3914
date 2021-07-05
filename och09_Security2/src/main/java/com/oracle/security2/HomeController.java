@@ -1,4 +1,4 @@
-package com.oracle.mvc23e;
+package com.oracle.security2;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -11,16 +11,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.oracle.mvc23e.command.ITicketCommand;
-import com.oracle.mvc23e.dto.TicketDto;
-
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
-	
-	private ITicketCommand ticketCommand;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -38,19 +33,25 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "buy_ticket";
+		return "home";
 	}
 	
-	@RequestMapping("/buy_ticket_card")
-	public String buy_ticket_card(TicketDto ticketDto, Model model) {
-		System.out.println("buy_ticket_card");
-		System.out.println("ticketDto: "+ticketDto.getConsumerId());
-		System.out.println("ticketDto: "+ticketDto.getAmount());
-		
-		ticketCommand.execute(ticketDto);
-		
-		model.addAttribute("ticketInfo", ticketDto);
-		
-		return "buy_ticket_end";
+	@RequestMapping("/login.html")
+	public String login(Locale locale, Model model) {
+		System.out.println("HomeController login.html Start...");
+		return "security/login";
 	}
+	
+	@RequestMapping("/welcome.html")
+	public String welcome(Locale locale, Model model) {
+		System.out.println("HomeController welcome.html Start...");
+		return "security/welcome";
+	}
+	
+	@RequestMapping("/loginForm.html")
+	public String loginForm(Locale locale, Model model) {
+		System.out.println("HomeController loginForm.html Start...");
+		return "security/loginForm";
+	}
+	
 }
