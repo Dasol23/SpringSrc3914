@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% response.sendRedirect("list"); %>
+<%
+	response.sendRedirect("list");
+%>
 </body>
 </html>

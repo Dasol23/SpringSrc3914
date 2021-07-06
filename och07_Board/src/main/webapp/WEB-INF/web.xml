@@ -13,7 +13,8 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-<!--  한글처리       -->
+	
+		<!--  한글처리       -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
  		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -47,5 +48,7 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+
 
 </web-app>

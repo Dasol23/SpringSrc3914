@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.oracle.boar">
+	<logger name="com.oracle.board">
 		<level value="info" />
 	</logger>
 	

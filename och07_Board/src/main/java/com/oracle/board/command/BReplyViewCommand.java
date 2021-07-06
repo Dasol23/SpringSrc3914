@@ -20,8 +20,7 @@ public class BReplyViewCommand implements BCommand {
 		BDao dao = new BDao();
 		BDto dto = dao.reply_view(bId);
 		
-		model.addAttribute("reply_view",dto);
-
+		model.addAttribute("reply_view", dto);
 	}
 
 }

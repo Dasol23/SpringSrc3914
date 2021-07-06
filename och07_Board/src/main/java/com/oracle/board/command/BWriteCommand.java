@@ -12,6 +12,7 @@ public class BWriteCommand implements BCommand {
 
 	@Override
 	public void execute(Model model) {
+		// TODO Auto-generated method stub
 		Map<String, Object> map = model.asMap();
 		HttpServletRequest request = (HttpServletRequest) map.get("request");
 		String bName = request.getParameter("bName");
