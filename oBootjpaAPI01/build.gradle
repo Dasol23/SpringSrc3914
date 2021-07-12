@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.oracle'
-version = '0version1.0'
+version = 'version1.0'
 sourceCompatibility = '11'
 
 configurations {

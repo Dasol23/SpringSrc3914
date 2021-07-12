@@ -1,0 +1,38 @@
+# http port set
+server:
+  port: 8518
+
+spring:
+  # Oracle Connect
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: scott
+    password: tiger
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  # ORM JPA
+  jpa:
+    hibernate:
+      ddl-auto: none # create
+    properties:
+      hibernate:
+      show_sql: true
+      format_sql: true
+          
+  #view resolver(Templete ->JSP Use)
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp    
+ 
+# Mybatis 
+mybatis:
+  # dto Location
+  type-aliases-package: com.oracle.oBootMybatis03.model
+  # xml Location
+  config-location: classpath:configuration.xml
+  mapper-locations: classpath:mappers/*.xml
+      
+#logging.level:
+#  org.hibernate.SQL: debug
+  # org.hibernate.type: trace
+  
