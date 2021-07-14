@@ -6,7 +6,7 @@
 <title>Insert title here</title></head><body>
 <h2>직원 목록</h2><a href="writeForm">입력</a>
  <p>kkk 수정시 전달  Message : ${kkk} <p>
- <p>kkk 수정시 전달  Message : ${kk3} <p>
+ <p>kk3 수정시 전달  Message : ${kk3} <p>
 
 <c:set var="num" value="${pg.total-pg.start+1}"></c:set>
 
@@ -22,7 +22,7 @@
 <c:if test="${pg.startPage > pg.pageBlock }">
 	<a href="list?currentPage=${pg.startPage-pg.pageBlock}">[이전]</a>
 </c:if>
-<c:forEach var="i" begin="${pg.startPage }" end="${pg.endPage }">
+<c:forEach var="i" begin="${pg.startPage}" end="${pg.endPage}">
 	<a href="list?currentPage=${i}">[${i}]</a>
 </c:forEach>
 <c:if test="${pg.endPage < pg.totalPage }">
