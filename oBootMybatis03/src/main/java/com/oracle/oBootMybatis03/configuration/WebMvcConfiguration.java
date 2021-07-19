@@ -8,7 +8,7 @@ import com.oracle.oBootMybatis03.service.SampleInterceptor;
 
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer {
-
+//로그인페이지 에서 사용
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new SampleInterceptor()).addPathPatterns("/interCepter");
 	}

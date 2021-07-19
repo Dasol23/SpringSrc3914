@@ -15,8 +15,13 @@
 // 	response.sendRedirect("writeDeptIn");		// Procedure VO    Test
 // 	response.sendRedirect("writeDeptCursor");	// Procedure cursor Test
 //  response.sendRedirect("memberJpa/new");			// JPA
-//   response.sendRedirect("members");
-response.sendRedirect("interCepterForm"); 	// interCepter 시작
+//  response.sendRedirect("members");
+//  response.sendRedirect("interCepterForm"); 	// interCepter 시작
+// 	response.sendRedirect("chat");
+// response.sendRedirect("helloText");
+// response.sendRedirect("sendVO3");
+response.sendRedirect("listEmpAjax");  // Ajax -> getDeptName,listEmpAjax
+
 %>
 
 </body>

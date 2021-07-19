@@ -119,4 +119,16 @@ public class EmpDaoImpl implements EmpDao {
 	    }
 	    return empDept;
 	   }
-}
+
+		@Override
+		public String deptName(int deptno) {
+			System.out.println("EmpDaoImpl deptName Start...");
+			return session.selectOne("TkdeptName", deptno);
+		}
+
+		@Override
+		public List<EmpDept> listEmp(EmpDept empDept) {
+			System.out.println("EmpDaoImpl listEmp Start...");
+			return session.selectList("TKlistEmpDept", empDept);
+		}
+	}

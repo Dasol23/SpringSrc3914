@@ -14,4 +14,6 @@ public interface EmpDao {
 	int				insert(Emp emp);
 	int				delete(int empno);
 	List<EmpDept>   listEmpDept();
+	String         deptName(int deptno);
+	List<EmpDept> listEmp(EmpDept empDept);
 }

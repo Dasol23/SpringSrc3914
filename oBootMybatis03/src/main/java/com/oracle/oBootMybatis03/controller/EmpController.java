@@ -252,4 +252,15 @@ public class EmpController {
 		model.addAttribute("id",ID);
 		return "doMemberWrite";
 	}
+	//Ajax List Test
+	@RequestMapping(value = "listEmpAjax")
+	public String listEmpAjax(Model model) {
+		EmpDept empDept = null;
+		System.out.println("Ajax list test start");
+		List<EmpDept> listEmp = es.listEmp(empDept);
+		System.out.println("EmpController listEmpAjax listEmp.size()->" +listEmp.size());
+		model.addAttribute("result", "kkk");
+		model.addAttribute("listEmp", listEmp);
+		return "listEmpAjax";
+	}
 }
